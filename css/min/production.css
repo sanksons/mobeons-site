@@ -6094,7 +6094,7 @@ p{
 	padding:280px 0;
 }
 .logo{
-	width:130px;
+	width:150px;
 	margin:0 auto 35px;
 }
 .header h1{
@@ -6873,6 +6873,7 @@ border: 2px solid #fff;
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
 }
+
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

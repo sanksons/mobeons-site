@@ -912,7 +912,7 @@ h5 {
 }
 
 .iphone {
-	background: url('../img/phone-outline.png') no-repeat;
+	background: url('../../img/phone-outline.png') no-repeat;
 	width: 280px;
 	height: 516px;
 	padding: 18px 18px 35px 18px;
@@ -920,7 +920,7 @@ h5 {
 }
 
 .digital-background {
-	background: url('../img/tablet2.jpg') no-repeat;
+	background: url('../../img/tablet2.jpg') no-repeat;
 	padding: 60px;
 }
 

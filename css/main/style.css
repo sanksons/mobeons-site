@@ -881,3 +881,57 @@ border: 2px solid #fff;
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
 }
+
+
+/*
+Custom
+*/
+
+h5 {
+	font-size: 19px;
+	color: #000000;
+	font-weight: 500;
+}
+
+#advertising .box-1 {
+	top: 20px;
+	text-align: center;
+	position: absolute;
+}
+
+#advertising .box-2 {
+	text-align: center;
+	top: 175px;
+	position: absolute;
+}
+
+#advertising .box-3 {
+	text-align: center;
+	top: 325px;
+	position: absolute;
+}
+
+.iphone {
+	background: url('../img/phone-outline.png') no-repeat;
+	width: 280px;
+	height: 516px;
+	padding: 18px 18px 35px 18px;
+	margin: 15px;
+}
+
+.digital-background {
+	background: url('../img/tablet2.jpg') no-repeat;
+	padding: 60px;
+}
+
+.videoclick {
+	cursor: pointer;
+}
+.whywe-list-col1 {
+float:left;
+width:60px;
+margin:10px 50px 10px 10px;
+}
+.whywe-list {
+margin-bottom:60px;
+}

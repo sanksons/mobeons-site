@@ -31,7 +31,7 @@
 				<a href="#"><img src="img/logo.png" alt=""></a>
 			</figure>
 			<h1 class="animated fadeInDown delay-07s">Welcome To Mobeons
-				Technologies</h1>
+				Intelligence</h1>
 			<ul class="we-create animated fadeInUp delay-1s">
 				<li>We are a one stop Digital Intelligence, Advertising and
 					Branding solution.</li>
@@ -362,34 +362,41 @@
 		<h6>‘Upside Down’ or inside out, We’re always ready to SET IT OFF</h6>
 			<div class="row">
 				<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+					
 					<div class="contact-info-box address clearfix">
 						<h3>
-							<i class=" icon-map-marker"></i>Address:
+							<i class="fa-map-marker"></i>Address:
 						</h3>
-						<span>308 Negra Arroyo Lane<br>Albuquerque, New
-							Mexico, 87111.
+						<span>E-774 Jasola Apollo, Sarita Vihar, New Delhi - 110025
 						</span>
 					</div>
-					<div class="contact-info-box phone clearfix">
+					<div class="contact-info-box address clearfix">
+						<h3>
+							<i class="fa-skype"></i>Skype:
+						</h3>
+						<span>mobeons
+						</span>
+					</div>
+				 	<div class="contact-info-box phone clearfix">
 						<h3>
 							<i class="fa-phone"></i>Phone:
 						</h3>
-						<span>1-800-BOO-YAHH</span>
+						<span>+91-9958311628</span>
 					</div>
 					<div class="contact-info-box email clearfix">
 						<h3>
 							<i class="fa-pencil"></i>email:
 						</h3>
-						<span>relations@mobeons.com</span>
+						<span>mobeons@gmail.com</span>
 					</div>
-					<div class="contact-info-box hours clearfix">
+					<!-- <div class="contact-info-box hours clearfix">
 						<h3>
 							<i class="fa-clock-o"></i>Hours:
 						</h3>
 						<span><strong>Monday - Thursday:</strong> 10am - 6pm<br>
 							<strong>Friday:</strong> People work on Fridays now?<br> <strong>Saturday
 								- Sunday:</strong> Best not to ask.</span>
-					</div>
+					</div> -->
 					<ul class="social-link">
 						<li class="twitter"><a href="#"><i class="fa-twitter"></i></a></li>
 						<li class="facebook"><a href="#"><i class="fa-facebook"></i></a></li>
@@ -403,7 +410,7 @@
 
 						<div id="sendmessage">Your message has been sent. Thank you!</div>
 						<div id="errormessage"></div>
-						<form action="" method="post" role="form" class="contactForm">
+						<form action="" method="post" role="form" class="contactForm" id="contact-form">
 							<div class="form-group">
 								<input type="text" name="name" class="form-control input-text"
 									id="name" placeholder="Your Name" data-rule="minlen:4"
@@ -446,7 +453,7 @@
 			<div class="footer-logo">
 				<a href="#"><img src="img/footer-logo.png" alt=""></a>
 			</div>
-			<span class="copyright">&copy; Mobeons Technologies. All
+			<span class="copyright">&copy; Mobeons Intelligence. All
 				Rights Reserved</span>
 		</div>
 	</footer>
@@ -459,6 +466,12 @@
             $('.main-nav').slideToggle();
             return false    
             
+        });
+        $('#contact-form').on('submit', function(e){
+        	e.preventDefault();
+        	$('#sendmessage').show();
+        	$(this).hide({duration:600,easing:'swing'});
+        	return false;
         });
       
     });

@@ -13,12 +13,20 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- STYLE START TAG -->
-<link href="css/min/production.min.css" rel="stylesheet"/>
-<!-- STYLE END TAG -->
+
+
+<link href="css/min/production.min.css" rel="stylesheet"/>
+
+
+<!-- STYLE END TAG -->
 
 <!-- SCRIPT START TAG -->
-<script src="js/min/production.min.js"></script>
-<!-- SCRIPT END TAG -->
+
+
+<script src="js/min/production.min.js"></script>
+
+
+<!-- SCRIPT END TAG -->
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
@@ -387,7 +395,7 @@
 						<h3>
 							<i class="fa-pencil"></i>email:
 						</h3>
-						<span>mobeons@gmail.com</span>
+						<span>contact@mobeons.com</span>
 					</div>
 					<!-- <div class="contact-info-box hours clearfix">
 						<h3>
@@ -432,7 +440,7 @@
 							</div>
 							<div class="form-group">
 								<textarea class="form-control input-text text-area"
-									name="message" rows="5" data-rule="required"
+									name="message" rows="5" data-rule="required" id="message"
 									data-msg="Please write something for us" placeholder="Message"></textarea>
 								<div class="validation"></div>
 							</div>
@@ -460,22 +468,57 @@
 
 
 	<script type="text/javascript">
-    $(document).ready(function(e) {
-        $('#test').scrollToFixed();
-        $('.res-nav_click').click(function(){
-            $('.main-nav').slideToggle();
-            return false    
-            
-        });
-        $('#contact-form').on('submit', function(e){
-        	e.preventDefault();
-        	$('#sendmessage').show();
-        	$(this).hide({duration:600,easing:'swing'});
-        	return false;
-        });
-      
-    });
-</script>
+		$(document).ready(function(e) {
+			$('#test').scrollToFixed();
+			$('.res-nav_click').click(function() {
+				$('.main-nav').slideToggle();
+				return false
+
+			});
+			$('#contact-form').on('submit', function(e) {
+				e.preventDefault();
+				if ($('#name').val() == "") {
+					$('#errormessage').text('Please provide us your Name.');
+					$('#errormessage').show();
+					return;
+				}
+				if ($('#email').val() == "") {
+					$('#errormessage').text('Please provide us your Email.');
+					$('#errormessage').show();
+					return;
+				}
+				if ($('#subject').val() == "") {
+					$('#errormessage').text('You will need to define a relevant Subject.');
+					$('#errormessage').show();
+					return;
+				}
+				if ($('#message').val() == "") {
+					$('#errormessage').text('Write your message.');
+					$('#errormessage').show();
+					return;
+				}
+				$('#errormessage').text('');
+				$('#errormessage').hide();
+
+				$.ajax({
+					type : "POST",
+					url : "http://mobeons.com/contactform/mail.php",
+					data : $('#contact-form').serialize(), // serializes the form's elements.
+					success : function(data) {
+						console.log(data);
+					}
+				});
+
+				$('#sendmessage').show();
+				$(this).hide({
+					duration : 600,
+					easing : 'swing'
+				});
+				return false;
+			});
+
+		});
+	</script>
 
 	<script>
     wow = new WOW(
